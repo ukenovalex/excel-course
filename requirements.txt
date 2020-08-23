@@ -1,0 +1,13 @@
+Webpack
+    -Babel
+    -SCSS
+    -ESLint
+    2 Mods
+        -DevMode
+            -DevServer
+            -SourceMap
+            -ESLint
+            -NotMinified
+        -ProdMode
+            Minified
+Git
