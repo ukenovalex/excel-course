@@ -1,4 +1,4 @@
-import './module';
-import './scss/index.scss';
+import './scss/index.scss'
+const text = "Super";
 
-console.log("working");
+console.log(text);
