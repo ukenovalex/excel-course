@@ -13,7 +13,8 @@
         "semi": "off",
         "require-jsdoc": "off",
         "operator-linebreak": "off",
-        "no-debugger": "off"
+        "no-debugger": "off",
+        "eol-last": "off"
     },
     "extends": ["eslint:recommended", "google"]
 }
