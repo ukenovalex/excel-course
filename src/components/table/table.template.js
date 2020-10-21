@@ -16,7 +16,7 @@ function toCell(row) {
                  data-type="cell" 
                  data-col="${col}"
                  data-id="${row}:${col}"
-            ></div>
+            >1</div>
         `
     }
 }
