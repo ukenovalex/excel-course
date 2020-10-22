@@ -4,7 +4,7 @@ const CODES = {
 }
 // function toCell(_, index) {
 //     return `
-//         <div class="cell" contenteditable data-type="resizable" 
+//         <div class="cell" contenteditable data-type="resizable"
 //         data-col="${index}"></div>
 //     `
 // }
@@ -16,7 +16,7 @@ function toCell(row) {
                  data-type="cell" 
                  data-col="${col}"
                  data-id="${row}:${col}"
-            >1</div>
+            ></div>
         `
     }
 }
