@@ -8,12 +8,17 @@ class Dom {
     html(html) {
         if (typeof(html) === "string") {
             this.$el.innerHTML = html;
+            return this
         } else {
             return this.$el.get.outerHTML.trim();
         }
     }
+    clear() {
+        this.html('');
+        return this;
+    }
     text(text) {
-        if (typeof(text) === 'string') {
+        if (typeof(text) !== 'undefined') {
             this.$el.textContent = text;
             return this;
         }
@@ -21,11 +26,6 @@ class Dom {
             return this.$el.value.trim();
         }
         return this.$el.textContent.trim();
-    }
-
-    clear() {
-        this.html('');
-        return this;
     }
     on(eventType, callBack) {
         this.$el.addEventListener(eventType, callBack);
@@ -76,6 +76,13 @@ class Dom {
         });
     }
 
+    getStyles(styles =[]) {
+        return styles.reduce((res, s) => {
+            res[s] = this.$el.style[s]
+            return res
+        }, {})
+    }
+
     id(parsed) {
         if (parsed) {
             const parser = this.id().split(':');
@@ -100,6 +107,13 @@ class Dom {
     focus() {
         this.$el.focus();
         return this;
+    }
+    attr(name, value) {
+        if (value) {
+            this.$el.setAttribute(name, value);
+            return this;
+        }
+        return this.$el.getAttribute(name);
     }
 }
 
