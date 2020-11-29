@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "startDev": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "start": "node index.js",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "repository": {
@@ -52,6 +53,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "eslint-plugin-jest": "^24.1.3",
+    "express": "^4.17.1",
     "normalize.css": "^8.0.1"
   }
 }
